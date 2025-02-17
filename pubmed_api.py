@@ -1,6 +1,4 @@
-import requests
 import xml.etree.ElementTree as ET
-import asyncio
 import aiohttp
 from typing import List, Dict
 import re
