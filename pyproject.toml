@@ -1,0 +1,26 @@
+[project]
+name = "pubmed-fetcher"
+version = "0.1.0"
+description = "Fetch PubMed papers and classify authors based on affiliation."
+authors = [
+    {name = "krishnatejaswi2005", email = "tejaswi.jgs@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.12"
+
+# Dependencies including new libraries for async and parsing
+dependencies = [
+    "requests (>=2.32.3,<3.0.0)",
+    "pandas (>=2.2.3,<3.0.0)",
+    "lxml (>=5.3.1,<6.0.0)",
+    "beautifulsoup4 (>=4.11.1,<5.0.0)",  # For parsing HTML
+    "aiohttp (>=3.8.1,<4.0.0)"  # For async HTTP requests
+]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+# Define the CLI commands (for your script)
+[tool.poetry.scripts]
+get-papers-list = "cli:main"
